@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-html-css",
+  "version": "1.0.0",
+  "description": "Portfolio make it with HTML y CSS",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "animation-scroll-css"
+  ],
+  "author": "conancos",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

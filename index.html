@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="./assets/mask222.ico" type="image/x-icon">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        
+        <title>HTML_CSS Portfolio</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav id="navbar">
+                <a href="#welcome-section">About</a>
+                <a href="#projects">Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="welcome-section">
+            <h1><span class="anim1">Hi, </span><span class="anim2">I am Joaquín Mrtz.</span></h1>
+            <p class="subtitle">FullStack Developer <small>trainee</small></p>
+            <p class="rrss">
+                <a href="https://github.com/conancos" rel="noopener" class="anim2">
+                    <span class="bx bxl-github github"></span>&nbsp; GitHub</a>
+                <a href="https://www.linkedin.com/in/joaquin-martinez-cortes/" rel="noopener" class="anim2">Linkedin&nbsp;
+                    <span class="bx bxl-linkedin linkedin"></span></a>
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>These are some of my projects</h2>
+            <div class="projects-grid"><!-- 6 hermanos 👨‍👦‍👦👩‍👦‍👦-->
+                <a class="project open1" href="../next/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/mask222.avif" alt="photo next projects" loading="lazy">
+                    <p class="project-tile new">NEXT > &nbsp; New Projects</p>
+                </a>
+                <a class="project open2" href="../getgoldtalent/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/landingpage3.avif"
+                    alt="photo web" loading="lazy">
+                    <p class="project-tile">Product Landing Page</p>
+                </a>
+                <a class="project open3" href="../brainactivity/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/documentacionTecnica.jpg"
+                    alt="photo web" loading="lazy">
+                    <p class="project-tile">Technical Documentation</p>
+                </a>
+                <a class="project open4" href="../accordion/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/carruselFotos.jpg"
+                        alt="photo web" loazing="lazy">
+                    <p class="project-tile">Photo Grid Accordion</p>
+                </a>
+                <a class="project open5" href="../tribute/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/proyectoHomenaje.jpg"
+                        alt="photo web" loading="lazy">
+                    <p class="project-tile">Tribute Page</p>
+                </a>
+                <a class="project open6" href="../surveyform/index.html" target="_blank">
+                    <img class="projects_img reduce" src="./images/proyectoFormulario.jpg"
+                        alt="photo web" loading="lazy">                    
+                    <p class="project-tile">Survey Form</p>
+                </a>
+            </div>                        
+            <!-- <a href="#open" id="open" class="open">
+                <span class='bx bx-up-arrow triangle_ico'></span>
+                <p class="project-tile">Open all</p>
+            </a> -->
+        </section>
+
+        <section id="contact">            
+            <div class="video-container">
+                <video src="./assets/gif-universo.mp4" autoplay muted loop playsinline aria-label="Video" type="video/mp4"></video>
+            </div>
+            <div class="contact-header">                
+                <h2>Let's work together...</h2>
+                <h6>How do you take your coffee?</h6>
+            </div>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/joaquin-martinez-cortes/" target="_blank" rel="noopener" rel="noreferrer"><span class='bx bxl-linkedin-square' style='color:#50f'></span> LinkedIn</a>
+                <a href="https://github.com/conancos" target="_blank" rel="noopener" rel="noreferrer"><span class='bx bxl-github' style='color:#50f'></span> GitHub</a>
+                <a href="#"><span class='bx bxl-twitter' style='color:transparent'></span> Twitter</a>
+                <a href="tel:333-333-3333"><span class='bx bx-phone' style='color:#50f'></span> Call Me</a>
+            </div>        
+        </section>
+        
+        <footer>
+            <p>This is the last project, <a href="https://www.freecodecamp.org/CONANCOS" target="_blank">The ROADMAP.</a></p>
+            <p>Developed to obtain the <a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a> certificate.</p>
+        </footer>
+    </body>
+        
+        <script>
+            console.log("Hola metaWorld");
+            document.querySelectorAll('.reduce').forEach(el => {
+                el.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                })
+            })
+        </script>
+<html>
