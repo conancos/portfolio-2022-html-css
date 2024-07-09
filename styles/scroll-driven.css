@@ -1,0 +1,78 @@
+/* Responsive Scroll Driven Animations Mobile*/
+@media (width < 820px) {
+    .project::before, .project::after {
+        animation: open .6s linear forwards;
+        animation-timeline: scroll(root block);
+    }
+    .open1::before, .open1::after {
+        animation-range: cover 23% cover 30%;
+    }
+    .open2::before, .open2::after {
+        animation-range: cover 33% cover 40%;
+        animation-delay: 1.4s;
+    }
+    .open3::before, .open3::after {
+        animation-range: cover 43% cover 50%;
+        animation-delay: 2.8s;
+    }
+    .open4::before, .open4::after {
+        animation-range: cover 53% cover 60%;
+        animation-delay: 5.6s;
+    }
+    .open5::before, .open5::after {
+        animation-range: cover 63% cover 70%;
+        animation-delay: 11.2s;
+    }
+    .open6::before, .open6::after {
+        animation-range: cover 73% cover 80%;
+        animation-delay: 22.4s;
+    }
+}
+
+/* Responsive Scroll Driven Animations Tablet */
+@media (820px <= width <= 1024px) {
+    .project::before, .project::after {
+        animation: open .6s linear forwards;
+        animation-timeline: scroll(root block);
+    }
+    .open1::before, .open1::after {
+        animation-range: cover 25% cover 38%;
+    }
+    .open2::before, .open2::after {
+        animation-range: cover 25% cover 38%;
+    }
+    .open3::before, .open3::after {
+        animation-range: contain 25% cover 56%;
+        animation-delay: 1s;
+    }
+    .open4::before, .open4::after {
+        animation-range: contain 25% cover 56%;
+        animation-delay: 1s;
+    }
+    .open5::before, .open5::after {
+        animation-range: contain 40% cover 69%;
+        animation-delay: 1.1s;
+    }
+    .open6::before, .open6::after {
+        animation-range: contain 40% cover 69%;
+        animation-delay: 1.1s;
+    }
+}
+
+/* Animation */
+@keyframes open {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+@keyframes close {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}

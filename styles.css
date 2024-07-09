@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('styles/scroll-driven.css');
 
 * {
     margin: 0;
@@ -70,7 +71,7 @@ body {
         font-size: 1.3rem;
         margin: 0 auto;
         /* line-height: 3.5; */
-        padding: 5px 12px 5px 12px;
+        padding: 5px 10px 5px 10px;
         text-align: center
     }
 }
@@ -149,7 +150,7 @@ h1 span.anim2 {
     transition: .4s;
 }
 #welcome-section .rrss .anim2:hover {
-    color: #aff;
+    color: #ffa;
     transition: .4s;    
 }
 
@@ -231,15 +232,19 @@ h1 span.anim1 {
 
 @media (max-width: 374px) {
     #welcome-section p.subtitle {
-        font-size: 1.3rem;
+        font-size: 1.rem;
         transition: .5s
     }
 }
 small {
     /* filter: drop-shadow(7px 5px 10px crimson); */
     font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    color: var(--my-red);    
+    font-weight: 800;
+    position: relative;
+    bottom: 1px;
+    -webkit-text-stroke: 1.6px var(--my-red);
+    color: #ff8;
+    filter: drop-shadow(10px 2px 12px var(--my-red));
 }
 
 /* Starting => PROJECTS 💢💢🔻🔻💢💢*/
@@ -353,27 +358,8 @@ a.project {
     -webkit-text-stroke: 3.7px rgb(0, 0, 0);
     cursor: not-allowed;
 }
+/* //Scroll Driven Animations - open 🎢🎡 */
 
-@media (width <= 1024px) {
-    .open1::after, .open1::before,
-    .open2::after, .open2::before,
-    .open3::after, .open3::before,
-    .open4::after, .open4::before,
-    .open5::after, .open5::before,
-    .open6::after, .open6::before {
-        animation: open linear .8s forwards;
-        animation-timeline: scroll(root block);
-        animation-range: cover 33% ;
-        /* animation-timeline: scroll(root block); */
-        /* animation-name: openOpen; */
-        /* animation-range: exit-crossing 28% contain 35%; */
-        /* --animation =  */
-        transform: translateY(0%);
-        transition: transform .6s;
-        --open : translateY(-100%);
-
-    }
-}
 .project::after, .project::before {
     z-index: 99;
 }
@@ -399,31 +385,12 @@ a.project {
 
 .project:hover::before,
 .project:hover::after {
-    /* transform: scale(0); */
-    /* background: repeating-linear-gradient(180deg, #000, #0005, #000 50px); */
-    transform: translateY(-100%);
+     transform: translateY(-100%);
     transition: .6s;
     transition-timing-function: ease-out;
 }
-@keyframes open {
-    from {
-        transform: var(--open);
-        transition: transform .6s;
-    }
-    to {
-        transform: var(--open);
-    }
-}
-@keyframes openOpen {
-    from {
-        /* background: repeating-linear-gradient(180deg, #000, #0005, #000 50px); */
-        transform: translateY(0%);
-    }
-    to { 
-        /* background: repeating-linear-gradient(180deg, #000, #0005, #000 50px); */
-        transform: translateY(-100%);
-    }
-}
+
+
 .projects_img {
     grid-area: img;
     width: 100%;
