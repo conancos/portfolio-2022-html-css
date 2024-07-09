@@ -252,9 +252,10 @@ small {
     padding: 75px 0px;    
     text-align: center;
     font-size: 1.3rem;
-    background-image: linear-gradient(90deg,#023,#fff,#023);
-    /* background: rgb(255, 255, 255); */
+    background-image: linear-gradient(90deg,#012,#ffa,#012) /*#023*/;
+    /* background: #ffa; */
     padding-bottom: 150px;
+    /* mask-image: linear-gradient( transparent 5%, #023 20% 80%, transparent 95%); */
 }
 
 #projects h2 {
@@ -267,6 +268,7 @@ small {
     font-family: 'Raleway', sans-serif;
     margin: 75px auto;
     animation: anim3 10s infinite;
+    z-index: 100;
 }
 
 @keyframes anim3 {
@@ -498,6 +500,7 @@ p.project-tile {
     max-height: 100vh;
     overflow: hidden;
     pointer-events: auto;
+    mask-image: linear-gradient(180deg, #0005 2%, #000 20% 90%, #0003 98%);
 }
 
 .video-container {
