@@ -497,6 +497,7 @@ p.project-tile {
     position: relative;
     max-height: 100vh;
     overflow: hidden;
+    pointer-events: auto;
 }
 
 .video-container {

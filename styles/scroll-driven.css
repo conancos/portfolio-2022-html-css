@@ -8,24 +8,24 @@
         animation-range: cover 23% cover 30%;
     }
     .open2::before, .open2::after {
-        animation-range: cover 33% cover 40%;
-        animation-delay: 1.4s;
+        animation-range: cover 30% cover 40%;
+        animation-delay: .2s;
     }
     .open3::before, .open3::after {
-        animation-range: cover 43% cover 50%;
-        animation-delay: 2.8s;
+        animation-range: cover 38% cover 50%;
+        animation-delay: .4s;
     }
     .open4::before, .open4::after {
-        animation-range: cover 53% cover 60%;
-        animation-delay: 5.6s;
+        animation-range: cover 45% cover 60%;
+        animation-delay: .6s;
     }
     .open5::before, .open5::after {
-        animation-range: cover 63% cover 70%;
-        animation-delay: 11.2s;
+        animation-range: cover 53% cover 70%;
+        animation-delay: .8s;
     }
     .open6::before, .open6::after {
-        animation-range: cover 73% cover 80%;
-        animation-delay: 22.4s;
+        animation-range: cover 65% cover 80%;
+        animation-delay: 1s;
     }
 }
 
