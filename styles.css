@@ -91,6 +91,7 @@ body {
     height: 100vh;
     width: 100%;
     justify-content: center;
+    row-gap: .5rem;
     align-items: center;
     flex-direction: column;
     /*background-image: linear-gradient(62deg, #3a3d40, #181719); Freecodecamp example */
@@ -104,13 +105,20 @@ body {
     font-size: 4rem;
     line-height: 1;
     color: transparent;
-    -webkit-text-stroke: 3.6px #00f;
+    -webkit-text-stroke: 2.6px #00f;
     background: #000;
     /* font-weight: 800; */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: opacity(0%);
+    transform: translateY(-150px);
+    scale: 0.6;
+    animation: show-h1 .5s ease-out forwards;
 }
+    @keyframes show-h1 {
+        100% {filter: opacity(100%); transform: translateY(0px); scale: 1;}
+    }
 
 h1 span.anim2 {
     animation: anim2 1s linear infinite;
@@ -137,8 +145,24 @@ h1 span.anim2 {
             font-size: 2.2rem;
             vertical-align: sub;
         }
-    } 
+    }
+    .show-github {
+        transform: translateX(-50px);
+        filter: opacity(0);
+        animation: show-github .1s .5s ease-out forwards;
+    }
+    .show-linkedin {
+        transform: translateX(50px);        
+        filter: opacity(0);
+        animation: show-linkedin .1s .5s ease-out forwards;
+    }
 }
+    @keyframes show-github {
+        100% {transform: translateX(0px); filter: opacity(100%); scale: 1; display: block}
+    }
+    @keyframes show-linkedin {
+        100% {transform: translateX(0px); filter: opacity(100%); scale: 1; display: block}
+    }
 #welcome-section .rrss .anim2:hover .github {
     border-radius: 50%;
     box-shadow: 0 0 12px 4px var(--my-red);
@@ -224,11 +248,19 @@ h1 span.anim1 {
     text-shadow: 0 0 2px var(--my-red);    
     /* position: relative;
     bottom: 5px; */
-    
     -webkit-text-stroke: .2px blue;
     margin-top: 10px;
     margin-bottom: 15px;
+
+    transform: translateY(150px);
+    filter: opacity(0%);
+    scale: 0.6;
+    animation: show-subtitle .5s ease-out forwards;
 }
+    @keyframes show-subtitle {
+        100% {filter: opacity(100%); transform: translateY(0px); scale: 1;}
+    }
+
 
 @media (max-width: 374px) {
     #welcome-section p.subtitle {
@@ -525,7 +557,9 @@ video {
     font-size: 4rem;
     font-family: 'Raleway', sans-serif;
     line-height: 1;
+    
 }
+
 @media (max-width: 635px) {
     .contact-header h2 {
         font-size: 3.5rem
@@ -540,15 +574,16 @@ video {
     .contact-header h2 {
         font-size: 2.7rem
     }
-    .contact-header h6 {
-        font-size: 18px
+    .contact-header p {
+        font-size: 18px;
+        width: 75% !important
     }
 }
 @media (max-width: 430px) {
     .contact-header h2 {
         font-size: 2.3rem
     }
-    .contact-header h6 {
+    .contact-header p {
         font-size: 16px
     }
 }
@@ -562,19 +597,30 @@ video {
         font-size: 1.9rem
     }
 }
-.contact-header h6 {
+.contact-header p {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    margin-top: 15px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    text-shadow: 0px 0px 8px #50f;
 }
 .contact-links {
     margin-top: 35px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
-    justify-content: center;
-    align-items: center
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+    /* @media (max-width: 480px) {
+        .contact-links {
+            flex-direction: row;
+        }
+    } */
 
 .contact-links a{
     color: white;
@@ -606,7 +652,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px -1px 4px 2px #be3144;    
+    /* box-shadow: 0px -1px 4px 2px #be3144; */
+    box-shadow: 0px -1px 16px 0px #be314477;   
     background: transparent;
     font-weight: 800;    
 }
@@ -616,6 +663,12 @@ footer p{
     text-align: center;
     display: inline;
     margin: 1rem;
+    & span{
+        color: royalblue;
+        font-size: 1.25rem;
+        vertical-align: -1px;
+        
+    }
 }
 
 footer p:nth-of-type(1) a{
@@ -626,12 +679,13 @@ footer p:nth-of-type(1) a{
     line-height: 1
 }
 
-footer p:nth-of-type(2) a{
+
+/* footer p:nth-of-type(2) a{
     color: #50f;
     font-size: 1.15rem;
     vertical-align: -1px;
     line-height: 1
-}    
+} */    
 
 @media (max-width: 550px) {
     footer p{
